@@ -1,0 +1,6 @@
+framework module Pods_LYSReachabilityManagerDemo {
+  umbrella header "Pods-LYSReachabilityManagerDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
