@@ -4,6 +4,21 @@
 ![iOS技术群群二维码](https://github.com/LIYANGSHUAI/LYSRepository/blob/master/iOS技术群群二维码.JPG)
 
 ```objc
+// 如下,这段代码只在有网络的情况下执行
+- (void)viewDidLoad
+{
+[super viewDidLoad];
+// Do any additional setup after loading the view.
+
+LYSIF_NETWORK_BEGIN
+
+NSLog(@"有网络!!!");
+
+LYSIF_NETWORK_END
+}
+```
+
+```objc
 // 在有网络的环境下执行
 #define LYSIF_NETWORK_BEGIN [[LYSReachabilityManager manager] lys_monitorNetwork:^{
 #define LYSIF_NETWORK_END }];
