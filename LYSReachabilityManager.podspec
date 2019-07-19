@@ -12,5 +12,4 @@ s.license      = "MIT"
 s.author             = { "LIYANGSHUAI" => "liyangshuai163@163.com" }
 s.source       = { :git => "https://github.com/LIYANGSHUAI/LYSReachabilityManager.git", :tag => "0.0.1" }
 s.source_files  = "LYSReachabilityManager/*.{h,m}"
-s.dependency "AFNetworking", "~> 3.2.1"
 end

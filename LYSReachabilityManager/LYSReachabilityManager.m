@@ -11,7 +11,7 @@
 @interface LYSReachabilityManager ()
 @property (nonatomic, copy) void(^callback)(void);
 @property (nonatomic, strong) NSMutableArray *managerArr;
-@property (nonatomic,strong, readwrite) AFNetworkReachabilityManager *manager;
+@property (nonatomic,strong, readwrite) LYSNetworkReachabilityManager *manager;
 @end
 
 @implementation LYSReachabilityManager
@@ -22,7 +22,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         manager = [[LYSReachabilityManager alloc] init];
-        manager.manager = [AFNetworkReachabilityManager sharedManager];
+        manager.manager = [LYSNetworkReachabilityManager sharedManager];
         [manager.manager startMonitoring];
     });
     return manager;
@@ -38,21 +38,21 @@
 
 - (void)lys_monitorNetwork:(void(^)(void))callback
 {
-    if (self.manager.networkReachabilityStatus == AFNetworkReachabilityStatusReachableViaWiFi ||
-        self.manager.networkReachabilityStatus == AFNetworkReachabilityStatusReachableViaWWAN) {
+    if (self.manager.networkReachabilityStatus == LYSNetworkReachabilityStatusReachableViaWiFi ||
+        self.manager.networkReachabilityStatus == LYSNetworkReachabilityStatusReachableViaWWAN) {
         callback();
     } else {
         LYSReachabilityManager *manager = [[LYSReachabilityManager alloc] init];
         manager.callback = callback;
         [self.managerArr addObject:manager];
-        [[NSNotificationCenter defaultCenter] addObserver:manager selector:@selector(didChangeNotification:) name:AFNetworkingReachabilityDidChangeNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:manager selector:@selector(didChangeNotification:) name:LYSNetworkingReachabilityDidChangeNotification object:nil];
     }
 }
 
 - (void)didChangeNotification:(NSNotification *)notifition
 {
-    AFNetworkReachabilityStatus status = [notifition.userInfo[AFNetworkingReachabilityNotificationStatusItem] integerValue];
-    if (status == AFNetworkReachabilityStatusReachableViaWiFi || status == AFNetworkReachabilityStatusReachableViaWWAN)
+    LYSNetworkReachabilityStatus status = [notifition.userInfo[LYSNetworkingReachabilityNotificationStatusItem] integerValue];
+    if (status == LYSNetworkReachabilityStatusReachableViaWiFi || status == LYSNetworkReachabilityStatusReachableViaWWAN)
     {
         self.callback();
         [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -62,20 +62,20 @@
 
 - (void)lys_monitorNetwork_wifi:(void(^)(void))callback
 {
-    if (self.manager.networkReachabilityStatus == AFNetworkReachabilityStatusReachableViaWiFi) {
+    if (self.manager.networkReachabilityStatus == LYSNetworkReachabilityStatusReachableViaWiFi) {
         callback();
     } else {
         LYSReachabilityManager *manager = [[LYSReachabilityManager alloc] init];
         manager.callback = callback;
         [self.managerArr addObject:manager];
-        [[NSNotificationCenter defaultCenter] addObserver:manager selector:@selector(didChangeNotification_wifi:) name:AFNetworkingReachabilityDidChangeNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:manager selector:@selector(didChangeNotification_wifi:) name:LYSNetworkingReachabilityDidChangeNotification object:nil];
     }
 }
 
 - (void)didChangeNotification_wifi:(NSNotification *)notifition
 {
-    AFNetworkReachabilityStatus status = [notifition.userInfo[AFNetworkingReachabilityNotificationStatusItem] integerValue];
-    if (status == AFNetworkReachabilityStatusReachableViaWiFi)
+    LYSNetworkReachabilityStatus status = [notifition.userInfo[LYSNetworkingReachabilityNotificationStatusItem] integerValue];
+    if (status == LYSNetworkReachabilityStatusReachableViaWiFi)
     {
         self.callback();
         [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -85,13 +85,13 @@
 
 - (BOOL)lys_network
 {
-    return (self.manager.networkReachabilityStatus == AFNetworkReachabilityStatusReachableViaWiFi ||
-            self.manager.networkReachabilityStatus == AFNetworkReachabilityStatusReachableViaWWAN);
+    return (self.manager.networkReachabilityStatus == LYSNetworkReachabilityStatusReachableViaWiFi ||
+            self.manager.networkReachabilityStatus == LYSNetworkReachabilityStatusReachableViaWWAN);
 }
 
 - (BOOL)lys_network_wifi
 {
-    return (self.manager.networkReachabilityStatus == AFNetworkReachabilityStatusReachableViaWiFi);
+    return (self.manager.networkReachabilityStatus == LYSNetworkReachabilityStatusReachableViaWiFi);
 }
 
 @end

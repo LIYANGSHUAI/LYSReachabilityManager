@@ -16,5 +16,5 @@ target 'LYSReachabilityManagerDemo' do
     inherit! :search_paths
     # Pods for testing
   end
-pod 'AFNetworking', '~> 3.2.1'
+
 end

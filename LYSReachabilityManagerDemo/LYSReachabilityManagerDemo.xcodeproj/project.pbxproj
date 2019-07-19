@@ -20,6 +20,7 @@
 		CC334B4A22E1715B005AF6B5 /* LYSReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC334B4922E1715B005AF6B5 /* LYSReachabilityManager.m */; };
 		CC334B4C22E18C86005AF6B5 /* LYSReachabilityManager.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CC334B4B22E18C86005AF6B5 /* LYSReachabilityManager.podspec */; };
 		CC334B4E22E18C8A005AF6B5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CC334B4D22E18C8A005AF6B5 /* README.md */; };
+		CC334B5122E1A1CC005AF6B5 /* LYSNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC334B5022E1A1CC005AF6B5 /* LYSNetworkReachabilityManager.m */; };
 		FC8210E19C7053D3265A9F49 /* Pods_LYSReachabilityManagerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A979E5D856F6E2E95DF98420 /* Pods_LYSReachabilityManagerDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,8 @@
 		CC334B4922E1715B005AF6B5 /* LYSReachabilityManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYSReachabilityManager.m; sourceTree = "<group>"; };
 		CC334B4B22E18C86005AF6B5 /* LYSReachabilityManager.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LYSReachabilityManager.podspec; path = ../../LYSReachabilityManager.podspec; sourceTree = "<group>"; };
 		CC334B4D22E18C8A005AF6B5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		CC334B4F22E1A1CC005AF6B5 /* LYSNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		CC334B5022E1A1CC005AF6B5 /* LYSNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSNetworkReachabilityManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +188,8 @@
 		CC334B4722E1714E005AF6B5 /* LYSReachabilityManager */ = {
 			isa = PBXGroup;
 			children = (
+				CC334B4F22E1A1CC005AF6B5 /* LYSNetworkReachabilityManager.h */,
+				CC334B5022E1A1CC005AF6B5 /* LYSNetworkReachabilityManager.m */,
 				CC334B4822E1715B005AF6B5 /* LYSReachabilityManager.h */,
 				CC334B4922E1715B005AF6B5 /* LYSReachabilityManager.m */,
 			);
@@ -203,7 +208,6 @@
 				CC334B0E22E1712C005AF6B5 /* Sources */,
 				CC334B0F22E1712C005AF6B5 /* Frameworks */,
 				CC334B1022E1712C005AF6B5 /* Resources */,
-				E368DA68B6A0A12E8FE94343 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -390,23 +394,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E368DA68B6A0A12E8FE94343 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LYSReachabilityManagerDemo/Pods-LYSReachabilityManagerDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LYSReachabilityManagerDemo/Pods-LYSReachabilityManagerDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LYSReachabilityManagerDemo/Pods-LYSReachabilityManagerDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -416,6 +403,7 @@
 			files = (
 				CC334B1A22E1712C005AF6B5 /* ViewController.m in Sources */,
 				CC334B2522E1712C005AF6B5 /* main.m in Sources */,
+				CC334B5122E1A1CC005AF6B5 /* LYSNetworkReachabilityManager.m in Sources */,
 				CC334B1722E1712C005AF6B5 /* AppDelegate.m in Sources */,
 				CC334B4A22E1715B005AF6B5 /* LYSReachabilityManager.m in Sources */,
 			);
