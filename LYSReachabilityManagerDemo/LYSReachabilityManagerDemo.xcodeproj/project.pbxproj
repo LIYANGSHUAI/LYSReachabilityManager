@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,8 @@
 		CC334B2F22E1712C005AF6B5 /* LYSReachabilityManagerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC334B2E22E1712C005AF6B5 /* LYSReachabilityManagerDemoTests.m */; };
 		CC334B3A22E1712C005AF6B5 /* LYSReachabilityManagerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC334B3922E1712C005AF6B5 /* LYSReachabilityManagerDemoUITests.m */; };
 		CC334B4A22E1715B005AF6B5 /* LYSReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC334B4922E1715B005AF6B5 /* LYSReachabilityManager.m */; };
+		CC334B4C22E18C86005AF6B5 /* LYSReachabilityManager.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CC334B4B22E18C86005AF6B5 /* LYSReachabilityManager.podspec */; };
+		CC334B4E22E18C8A005AF6B5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CC334B4D22E18C8A005AF6B5 /* README.md */; };
 		FC8210E19C7053D3265A9F49 /* Pods_LYSReachabilityManagerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A979E5D856F6E2E95DF98420 /* Pods_LYSReachabilityManagerDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,8 @@
 		CC334B3B22E1712C005AF6B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC334B4822E1715B005AF6B5 /* LYSReachabilityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYSReachabilityManager.h; sourceTree = "<group>"; };
 		CC334B4922E1715B005AF6B5 /* LYSReachabilityManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYSReachabilityManager.m; sourceTree = "<group>"; };
+		CC334B4B22E18C86005AF6B5 /* LYSReachabilityManager.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LYSReachabilityManager.podspec; path = ../../LYSReachabilityManager.podspec; sourceTree = "<group>"; };
+		CC334B4D22E18C8A005AF6B5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +120,6 @@
 				0F678D4265D6E19C9853C003 /* Pods-LYSReachabilityManagerDemoUITests.debug.xcconfig */,
 				151D5A072BC2F71086D9ADCE /* Pods-LYSReachabilityManagerDemoUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -149,6 +152,8 @@
 				CC334B1622E1712C005AF6B5 /* AppDelegate.m */,
 				CC334B1822E1712C005AF6B5 /* ViewController.h */,
 				CC334B1922E1712C005AF6B5 /* ViewController.m */,
+				CC334B4D22E18C8A005AF6B5 /* README.md */,
+				CC334B4B22E18C86005AF6B5 /* LYSReachabilityManager.podspec */,
 				CC334B4722E1714E005AF6B5 /* LYSReachabilityManager */,
 				CC334B1B22E1712C005AF6B5 /* Main.storyboard */,
 				CC334B1E22E1712C005AF6B5 /* Assets.xcassets */,
@@ -296,6 +301,8 @@
 			files = (
 				CC334B2222E1712C005AF6B5 /* LaunchScreen.storyboard in Resources */,
 				CC334B1F22E1712C005AF6B5 /* Assets.xcassets in Resources */,
+				CC334B4E22E18C8A005AF6B5 /* README.md in Resources */,
+				CC334B4C22E18C86005AF6B5 /* LYSReachabilityManager.podspec in Resources */,
 				CC334B1D22E1712C005AF6B5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
